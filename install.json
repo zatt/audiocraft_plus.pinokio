@@ -8,12 +8,12 @@
     "method": "shell.run",
     "params": {
       "message": "{{os.platform() === 'win32' ? 'python' : 'python3'}} -m venv env",
-      "path": "audiocraft"
+      "path": "audiocraft_plus"
     }
   }, {
     "method": "shell.start",
     "params": {
-      "path": "audiocraft"
+      "path": "audiocraft_plus"
     }
   }, {
     "method": "shell.enter",
