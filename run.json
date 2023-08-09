@@ -1,2 +1,19 @@
-call .\venv\Scripts\activate.bat
-python app.py
+{
+  "run": [{
+    "method": "shell.start"
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'audiocraft_plus\\\\env\\\\Scripts\\\\activate' : 'source audiocraft_plus/env/bin/activate'}}",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'python' : 'python3'}} app.py"
+    }
+  }]
+}
