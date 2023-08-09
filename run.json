@@ -4,7 +4,7 @@
   }, {
     "method": "shell.enter",
     "params": {
-      "message": "{{os.platform() === 'win32' ? 'audiocraft\\\\env\\\\Scripts\\\\activate' : 'source audiocraft/env/bin/activate'}}",
+      "message": "{{os.platform() === 'win32' ? 'audiocraft_plus\\\\env\\\\Scripts\\\\activate' : 'source audiocraft/env/bin/activate'}}",
       "on": [{
         "event": null,
         "return": true

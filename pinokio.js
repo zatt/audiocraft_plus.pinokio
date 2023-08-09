@@ -9,7 +9,7 @@ module.exports = {
   description: "Text to audio, open sourced by Meta",
   icon: "icon.png",
   menu: async (kernel) => {
-    let installed = await exists(path.resolve(__dirname, "audiocraft", "env"))
+    let installed = await exists(path.resolve(__dirname, "audiocraft_plus", "env"))
     if (installed) {
       return [{
         html: "<i class='fa-solid fa-play'></i> Run",
