@@ -45,7 +45,7 @@
   }, {
     "method": "shell.enter",
     "params": {
-      "message": "pip install -r {{(new RegExp('amd','i').test(system.graphics().controllers && system.graphics().controllers[0].vendor) ? 'requirements.txt')}} -e .",
+      "message": "pip install -r requirements.txt -e .",
       "on": [{
         "event": null,
         "return": true
