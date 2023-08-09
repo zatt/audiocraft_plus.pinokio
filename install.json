@@ -1,0 +1,46 @@
+{
+  "run": [{
+    "method": "shell.run",
+    "params": {
+      "message": "git clone https://github.com/GrandaddyShmax/audiocraft_plus.git"
+    }
+  }, {
+    "method": "shell.run",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'python' : 'python3'}} -m venv env",
+      "path": "audiocraft"
+    }
+  }, {
+    "method": "shell.start",
+    "params": {
+      "path": "audiocraft"
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "{{os.platform() === 'win32' ? 'env\\\\Scripts\\\\activate' : 'source env/bin/activate'}}",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "pip install 'torch>=2.0'",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "pip install -r {{(new RegExp('amd','i').test(system.graphics().controllers && system.graphics().controllers[0].vendor) ? 'requirements-no-xformers.txt' : 'requirements.txt')}} -e .",
+      "on": [{
+        "event": null,
+        "return": true
+      }]
+    }
+  }]
+}
