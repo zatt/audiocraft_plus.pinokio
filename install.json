@@ -2,7 +2,7 @@
   "run": [{
     "method": "shell.run",
     "params": {
-      "message": "git clone https://github.com/cocktailpeanut/audiocraft.git"
+      "message": "git clone https://github.com/GrandaddyShmax/audiocraft_plus.git"
     }
   }, {
     "method": "shell.run",
