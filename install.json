@@ -36,7 +36,7 @@
   }, {
     "method": "shell.enter",
     "params": {
-      "message": "conda install -y \"ffmpeg<5\" -c  conda-forge -p conda_env",
+      "message": "conda install -y 'ffmpeg<5' -c  conda-forge",
       "on": [{
         "event": null,
         "return": true
@@ -54,7 +54,7 @@
   }, {
     "method": "shell.enter",
     "params": {
-      "message": "pip install torch>=2.0",
+      "message": "pip install 'torch>=2.0'",
       "on": [{
         "event": null,
         "return": true
